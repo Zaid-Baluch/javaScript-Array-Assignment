@@ -6,7 +6,7 @@ var studentNames = [];
 
 // QUESTION 2
 
-var studentNames = ();
+//var studentNames = ();
 
 // QUESTION 3
 
@@ -26,7 +26,16 @@ var mixedArray = ["Zaid", 18, true, null];
 
 // QUESTION 7
 
-var educationQualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M.Phill", "phD"];
+var educationQualifications = [
+  "SSC",
+  "HSC",
+  "BCS",
+  "BS",
+  "BCOM",
+  "MS",
+  "M.Phill",
+  "phD",
+];
 
 // QUESTION 8
 
@@ -36,8 +45,9 @@ var student_score = [480, 320, 480];
 
 var total_marks = 500;
 
-for (var i = 0; i <= student_names; i++){
-    var percentage = (student_score[i] / total_marks) * 100;
-    console.log("Student:" + student_names[i]);
-    console.log("Score:" + student_score[i] + "out of" + total_marks);
+for (var i = 0; i < student_names.length; i++) {
+  var percentage = (student_score[i] / total_marks) * 100;
+  console.log("Student:" + student_names[i]);
+  console.log("Score:" + student_score[i] + "out of" + total_marks);
+  console.log("percentage: " + percentage.toFixed(2) + "%\n");
 }
