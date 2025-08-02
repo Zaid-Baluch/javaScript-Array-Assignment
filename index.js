@@ -51,3 +51,27 @@ for (var i = 0; i < student_names.length; i++) {
   console.log("Score:" + student_score[i] + "out of" + total_marks);
   console.log("percentage: " + percentage.toFixed(2) + "%\n");
 }
+
+// QUESTION 9
+
+var colors = ["Red", "Green", "Yellow", "Blue"];
+console.log("Original colors: " + colors.join(", "));
+
+var colorStart = prompt("which color do you want to add to the beginning");
+colors.unshift(colorStart);
+console.log("After adding to beginning:" + colors.join(", "));
+
+var colorEnd = prompt("which color do you want to add to the end");
+colors.push(colorEnd);
+console.log("After adding to end: " + colors.join(", "));
+
+colors.unshift("Purple", "Orange");
+console.log("After adding 2 colors to beginning:" + colors.join(", "));
+
+colors.shift();
+console.log("After deleting first color to beginning:" + colors.join(", "));
+
+colors.pop();
+console.log("After deleting last colors:" + colors.join(", "));
+
+var addcolor = +prompt("");
