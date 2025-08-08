@@ -2,11 +2,11 @@
 
 // QUESTION 1
 
-var studentNames = [];
+var studentNames = [""];
 
 // QUESTION 2
 
-//var studentNames = ();
+var studentNames = "";
 
 // QUESTION 3
 
@@ -54,24 +54,84 @@ for (var i = 0; i < student_names.length; i++) {
 
 // QUESTION 9
 
-var colors = ["Red", "Green", "Yellow", "Blue"];
-console.log("Original colors: " + colors.join(", "));
+var colors = ["red", "green", "yellow", "blue"];
 
-var colorStart = prompt("which color do you want to add to the beginning");
-colors.unshift(colorStart);
-console.log("After adding to beginning:" + colors.join(", "));
+var add = +prompt("enter the index number at u want to enter new color");
+var color_name = prompt("color name....");
+colors.splice(add, 0, color_name);
+document.write(colors + "<br><br><br>");
 
-var colorEnd = prompt("which color do you want to add to the end");
-colors.push(colorEnd);
-console.log("After adding to end: " + colors.join(", "));
+var remove = +prompt("color idex you want to remove.");
+var color_remove = prompt("how many color u want to remove");
 
-colors.unshift("Purple", "Orange");
-console.log("After adding 2 colors to beginning:" + colors.join(", "));
+colors.splice(remove, color_remove);
+document.write(colors + "<br><br><br>");
 
-colors.shift();
-console.log("After deleting first color to beginning:" + colors.join(", "));
+// QUESTION 10
+var students_score = [220, 120, 320, 420];
+document.write("score of sudets " + students_score + "<br><br>");
 
-colors.pop();
-console.log("After deleting last colors:" + colors.join(", "));
+students_score.sort(function (a, b) {
+  return a - b;
+});
+document.write(
+  "score of sudets after sorting " + students_score + "<br><br><br>"
+);
 
-var addcolor = +prompt("");
+// QUESTION 11
+
+var cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+
+doument.write("Cities list: ");
+doument.write(cities.join(", ") + "<br><br>");
+
+var selectedCities = cities.slice(2, 4);
+
+doument.write("Selected cities list:");
+doument.write(selectedCities.join(", ") + "<br><br><br>");
+
+//question 12
+var arr = ["this", "is", "my", "cat"];
+doument.write("String : " + arr.join(", ") + "<br><br><br>");
+
+//question 13
+var devices = [];
+
+devices.push("keyboard");
+devices.push("mouse");
+devices.push("printer");
+devices.push("monitor");
+
+document.write("Devices: " + devices.join(", ") + "<br><br>");
+
+document.write("Out: " + devices.shift() + "<br>");
+document.write("Out: " + devices.shift() + "<br>");
+document.write("Out: " + devices.shift() + "<br>");
+document.write("Out: " + devices.shift() + "<br><br><br>");
+
+//question 14
+var devices = [];
+
+devices.push("keyboard");
+devices.push("mouse");
+devices.push("printer");
+devices.push("monitor");
+
+document.write("Devices: " + devices.join(", ") + "<br><br>");
+
+document.write("Out: " + devices.pop() + "<br>");
+document.write("Out: " + devices.pop() + "<br>");
+document.write("Out: " + devices.pop() + "<br>");
+document.write("Out: " + devices.pop() + "<br><br><br>");
+
+//question 15
+
+var manufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+
+document.write("<select>");
+
+for (var i = 0; i < manufacturers.length; i++) {
+  document.write("<option>" + manufacturers[i] + "</option>");
+}
+
+document.write("</select>");
